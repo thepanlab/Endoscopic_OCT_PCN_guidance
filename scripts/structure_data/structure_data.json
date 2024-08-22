@@ -1,0 +1,4 @@
+{   "data_path": "/home/pcallec/nnUNet_blood-vessel/data/5000_All-Doppler-Labeled_Results",
+    "output_path":"/home/pcallec/nnUNet_blood-vessel/data/5000_new_structure/",
+    "division_percentage_train_test":[80,20]
+}
