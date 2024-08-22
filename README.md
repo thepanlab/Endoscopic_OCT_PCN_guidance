@@ -102,9 +102,8 @@ Scripts can be seen in: `/scripts/scripts_nnunet/commands_all.sh`
 
 # Run inference on test data
 From documentation:
-```
-Note that per default, inference will be done with all available folds. We very strongly recommend you use all 5 folds. Thus, all 5 folds must have been trained prior to running inference. The list of available folds nnU-Net found will be printed at the start of the inference.
-```
+
+> Note that per default, inference will be done with all available folds. We very strongly recommend you use all 5 folds. Thus, all 5 folds must have been trained prior to running inference. The list of available folds nnU-Net found will be printed at the start of the inference.
 
 Therefore prediction is using ensemble of the 5 folds:
 
