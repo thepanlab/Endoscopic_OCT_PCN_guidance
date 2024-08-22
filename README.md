@@ -84,6 +84,12 @@ export RESULTS_FOLDER="/home/pcallec/nnUNet_blood-vessel/results/nnUNet_trained_
 nnUNet_plan_and_preprocess -t 500 --verify_dataset_integrity -pl3d None
 `
 
+According to library repository:
+
+> Running `nnUNet_plan_and_preprocess` will populate your folder with preprocessed data. You will find the output in nnUNet_preprocessed/TaskXXX_MYTASK. nnUNet_plan_and_preprocess creates subfolders with preprocessed data for the 2D U-Net as well as all applicable 3D U-Nets. It will also create 'plans' files (with the ending.pkl) for the 2D and 3D configurations. These files contain the generated segmentation pipeline configuration and will be read by the nnUNetTrainer (see below). Note that the preprocessed data folder only contains the training cases. The test images are not preprocessed (they are not looked at at all!). Their preprocessing happens on the fly during inference.
+
+> `--verify_dataset_integrity` should be run at least for the first time the command is run on a given dataset. This will execute some checks on the dataset to ensure that it is compatible with nnU-Net. If this check has passed once, it can be omitted in future runs. If you adhere to the dataset conversion guide (see above) then this should pass without 
+
 # Run training
 
 `
@@ -100,7 +106,7 @@ From documentation:
 Note that per default, inference will be done with all available folds. We very strongly recommend you use all 5 folds. Thus, all 5 folds must have been trained prior to running inference. The list of available folds nnU-Net found will be printed at the start of the inference.
 ```
 
-Therefore prediction is using 5 folds:
+Therefore prediction is using ensemble of the 5 folds:
 
 ```bash
 nnUNet_find_best_configuration -m 2d -t 500
