@@ -68,7 +68,7 @@ python stucture_data.py -j structure_data_5000_v3.json
 
 `Task500_BloodVessel.py` and `Task501_BloodVessel_extra_test.py` will make the tranformation from png to nifti files to data. Thse files are based on `Task120_Massachusetts_RoadSegm.py`.
 
-These filese can be found in `/scripts/conversion_to_nifti`. 
+These files can be found in `/scripts/conversion_to_nifti`. 
 
 In order to be able to run `Task500_BloodVessel.py`, the following variables need to be defined, according to [link](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/setting_up_paths.md).
 
