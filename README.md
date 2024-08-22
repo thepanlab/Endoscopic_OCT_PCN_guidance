@@ -3,7 +3,7 @@
 We used  [nnUnet v1](https://github.com/MIC-DKFZ/nnUNet/tree/nnunetv1), which at that moment was the latest one. Currently, there is an improved version [nnUnet v2](https://github.com/MIC-DKFZ/nnUNet/tree/master) 
 ## Installation nnUNet
 
-Install nnUNet from [link](https://github.com/MIC-DKFZ/nnUNet). Install it as integrative framework because we will need to modify some files later:
+Install nnUNet from [link](https://github.com/MIC-DKFZ/nnUNet). Install it as integrative framework (-e) because we will need to modify some files later:
 
 ```bash
 git clone https://github.com/MIC-DKFZ/nnUNet.git
@@ -65,7 +65,10 @@ python convert_label_1_channel.py -j convert_label_1_channel_5000_v3.json
 python stucture_data.py -j structure_data_5000_v3.json
 ```
 
-#`Task500_BloodVessel.py`
+
+`Task500_BloodVessel.py` and `Task501_BloodVessel_extra_test.py` will make the tranformation from png to nifti files to data. Thse files are based on `Task120_Massachusetts_RoadSegm.py`.
+
+These filese can be found in `/scripts/conversion_to_nifti`. 
 
 In order to be able to run `Task500_BloodVessel.py`, the following variables need to be defined, according to [link](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/setting_up_paths.md).
 
@@ -86,6 +89,8 @@ nnUNet_plan_and_preprocess -t 500 --verify_dataset_integrity -pl3d None
 `
 nnUNet_train 2d nnUNetTrainerV2 500 FOLD
 `
+
+Scripts can be seen in: `/scripts/scripts_nnunet/commands_all.sh`
 
 **Note**: there was error `nnU-Net training: Error: mmap length is greater than file size and EOFError`. According to (Link)[https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/common_problems_and_solutions.md#nnu-net-training-error-mmap-length-is-greater-than-file-size-and-eoferror], the files .npy should be deleted.
 
