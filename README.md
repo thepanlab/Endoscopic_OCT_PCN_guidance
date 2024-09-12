@@ -132,3 +132,4 @@ nnUNet_predict -i /home/pcallec/nnUNet_blood-vessel/results/nnUNet_raw_data_base
 # Analysis of results
 * `Processing_results_blood-vessel_metrics_v3.ipynb`: Process metrics for validation and test
 * `Processing_results_blood-vessel_v3.ipynb`:  Generation superimposed images for validation and test
+* `Processing_results_nn-UNet_blood-vessel_extraTest.ipynb`: Generates superimosed images and calculate metrics for extra test.
