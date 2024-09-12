@@ -128,3 +128,7 @@ nnUNet_plan_and_preprocess -t 501 --verify_dataset_integrity -pl3d None
 CUDA_VISIBLE_DEVICES=1 
 nnUNet_predict -i /home/pcallec/nnUNet_blood-vessel/results/nnUNet_raw_data_base/nnUNet_raw_data/Task501_BloodVessel/imagesTr/ -o /home/pcallec/nnUNet_blood-vessel/results/extra_test_pred/ -t 501 -m 2d 2>&1 | tee output_pred_extra_test.txt
 ```
+
+# Analysis of results
+* `Processing_results_blood-vessel_metrics_v3.ipynb`: Process metrics for validation and test
+* `Processing_results_blood-vessel_v3.ipynb`:  Generation superimposed images for validation and test
